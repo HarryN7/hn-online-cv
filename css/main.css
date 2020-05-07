@@ -1,0 +1,146 @@
+body {
+  background-image: url("../images/background.JPG");
+  background-repeat: repeat;
+  background-size: 1600px;
+  background-color: #003550;
+}
+
+hr {
+    border: none;
+    height: 2px;
+    /* Set the hr color */
+    color: #003550; /* old IE */
+    background-color: #003550; /* Modern Browsers */
+}
+
+.hn-darkest-blue {
+	background-color: #003550;
+}
+
+.hn-dark-blue {
+	background-color: #004F6F;
+}
+
+.hn-blue {
+	background-color: #0076A7;
+}
+
+.hn-light-blue {
+	background-color: #0094A7;
+}
+
+.hn-lightest-blue {
+	background-color: #8ECBD2;
+}
+
+.hn-yellow {
+	background-color: #F2C80F;
+}
+
+.hn-header-div:hover{
+	background-color: #8ECBD2;
+}
+
+.hn-header-div{
+	background-color: #003550;
+}
+
+.hn-date {
+	color: #0076A7;
+	font-size: 16px;
+	display: inline;
+}
+
+h2 {
+	color: white;
+	text-transform: uppercase;
+	font-family: Arial;
+	text-align: center;
+	border-radius: 10px;
+	font-size: 20px;
+}
+h3 {
+	border-radius: 5px;
+	color: #0076A7;
+	font-size: 18px;
+	display: inline;
+}
+
+.hn-left-col-h3{
+	border-radius: 5px;
+	color: white;
+	font-size: 18px;
+}
+
+h4 {
+	font-family: Helvetica;
+    font-weight: bold;
+  }
+  
+.hn-left-col-p {
+    color: white;
+	padding-bottom: 10px;
+	
+  }
+ 
+.hn-left-col-list {
+    color: white;
+	list-style: inside;
+    padding-left: 0;
+  }
+  
+ul.hn-left-col-list li { 
+	margin-bottom: 5px; 
+}
+  
+.hn-right-col-text {
+    color: #003550;
+	padding-bottom: 8px;
+  }
+ 
+.head-list {
+ list-style-type: disc;
+ padding-left: 1em;
+}
+.sub-list {
+ list-style-type: circle;
+ margin-top: 5px;
+ margin-left: -2em;
+}
+ 
+#hn-timeline-text {
+	font-size:12px;
+	content-align: left;
+	
+}
+  
+.image-cropper {
+	overflow: hidden;
+    width: auto;
+    height: auto;
+    border-radius: 50%;
+}
+
+img {
+    height: auto;
+    width: 100%;
+}
+
+.hn-img {
+	max-width: 25px;
+	height: auto;
+	margin-right: 10px;
+}	
+
+centre {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.alignleft {
+	float: left;
+}
+.alignright {
+	float: right;
+}
