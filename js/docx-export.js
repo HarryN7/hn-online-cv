@@ -128,8 +128,16 @@
     const children = [];
 
     if (photoBytes) {
+      // `type: 'png'` is required — without it the library writes the
+      // image to the .docx with a `.undefined` filename extension, which
+      // has no entry in [Content_Types].xml. Word then flags the whole
+      // document as unreadable content on open.
       children.push(centred(
-        [new ImageRun({ data: photoBytes, transformation: { width: 90, height: 90 } })],
+        [new ImageRun({
+          data: photoBytes,
+          type: 'png',
+          transformation: { width: 90, height: 90 },
+        })],
         { spacing: { before: 80, after: 80 } }
       ));
     }
