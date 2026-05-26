@@ -325,7 +325,7 @@
 
   // ---------- EDUCATION ----------
   function renderEducation() {
-    const list = $('#education');
+    const list = $('#education-list');
     education.forEach((e) => {
       list.appendChild(
         el('li', { class: 'edu-item' }, [
