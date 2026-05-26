@@ -1,0 +1,143 @@
+/* Print stylesheet — used when printing or "Save as PDF".
+   Expands every collapsible, hides interactive chrome,
+   forces light theme, tightens typography. */
+
+@page {
+  size: A4;
+  margin: 14mm 14mm;
+}
+
+@media print {
+  :root {
+    --bg: #fff;
+    --bg-elev: #fff;
+    --bg-card: #fff;
+    --bg-alt: #f4f7f9;
+    --ink: #0b2233;
+    --ink-muted: #4a667a;
+    --ink-card: #0b2233;
+    --ink-card-mut: #4a667a;
+    --border: #d6e0e6;
+    --border-card: #d6e0e6;
+    --shadow: none;
+    --shadow-sm: none;
+  }
+
+  html, body {
+    background: #fff !important;
+    color: #0b2233 !important;
+    font-size: 10.5pt;
+    line-height: 1.4;
+  }
+
+  /* Hide interactive chrome */
+  .site-header,
+  .site-footer,
+  .skip-link,
+  #theme-toggle,
+  #print-btn,
+  .site-nav,
+  .site-header__actions,
+  .role-card__chevron,
+  .timeline {
+    display: none !important;
+  }
+
+  /* Expand every collapsible by default */
+  details { display: block; }
+  details > summary { list-style: none; cursor: default; }
+  details > summary::-webkit-details-marker { display: none; }
+  .role-card[open] .role-card__body,
+  .role-card .role-card__body { display: block !important; }
+
+  /* Force all role cards open for print */
+  details.role-card { display: block; }
+  details.role-card > summary { display: block; }
+
+  /* Tighter layout */
+  .hero {
+    background: none !important;
+    color: var(--ink) !important;
+    padding: 0 0 0.5rem !important;
+    border-bottom: 2px solid var(--c-mid);
+  }
+  .hero__inner { grid-template-columns: 80px 1fr !important; gap: 1rem !important; }
+  .hero__photo { width: 80px !important; height: 80px !important; border-color: var(--border) !important; }
+  .hero__eyebrow,
+  .hero__title,
+  .hero__contact a,
+  .hero__contact button { color: var(--ink-muted) !important; }
+  .hero__name { color: var(--ink) !important; font-size: 18pt; }
+  .hero__contact button {
+    background: none !important; border: none !important;
+    padding: 0 !important; color: var(--ink-muted) !important;
+  }
+  /* Contact details are revealed by beforeprint handler in app.js
+     before any print job, so the buttons are gone and the spans
+     contain the assembled values by the time print styles apply. */
+  .hero__contact .email-revealed,
+  .hero__contact .phone-revealed { display: inline !important; }
+  .hero__contact .email-reveal-btn,
+  .hero__contact .phone-reveal-btn { display: none !important; }
+
+  .hero__stats {
+    grid-template-columns: repeat(4, 1fr) !important;
+    margin-top: 0.5rem !important;
+    gap: 0.5rem !important;
+  }
+  .stat {
+    background: var(--bg-alt) !important;
+    border: 1px solid var(--border) !important;
+    padding: 0.5rem 0.7rem !important;
+  }
+  .stat__value { color: var(--c-mid) !important; font-size: 12pt; }
+  .stat__label { color: var(--ink-muted) !important; }
+
+  .section { padding: 0.75rem 0 !important; }
+  .section--alt { background: #fff !important; }
+  .section__title {
+    font-size: 13pt; border-bottom-width: 1.5px;
+    margin-top: 0.5rem;
+  }
+  .container { max-width: none; padding: 0 !important; }
+
+  /* Role cards open and lean */
+  .role-card {
+    border: 1px solid var(--border) !important;
+    border-left: 4px solid var(--c-mid) !important;
+    box-shadow: none !important;
+    page-break-inside: avoid;
+    break-inside: avoid;
+    margin-bottom: 0.5rem;
+  }
+  .role-card__header { padding: 0.5rem 0.75rem !important; cursor: default !important; }
+  .role-card__body { padding: 0 0.75rem 0.75rem !important; padding-top: 0.5rem !important; }
+  .role-card__title { font-size: 11pt; }
+  .role-card__client {
+    background: var(--c-mid) !important; color: #fff !important;
+    -webkit-print-color-adjust: exact; print-color-adjust: exact;
+  }
+
+  /* Always show all role cards open in print */
+  details.role-card .role-card__body { display: block !important; }
+
+  /* Keep certs & education tight */
+  .cert, .edu-item, .skill-group, .soft-skill {
+    page-break-inside: avoid; break-inside: avoid;
+  }
+
+  /* Earlier roles: show expanded */
+  details.earlier-roles { padding: 0.5rem 0.75rem !important; }
+  details.earlier-roles[open] ul,
+  details.earlier-roles ul { display: grid !important; }
+
+  /* Avoid awkward breaks at section heads */
+  .section__title { page-break-after: avoid; break-after: avoid; }
+
+  /* Force colour print for accent elements */
+  .role-card, .role-card__client, .stat, .skill-group li,
+  .cert, .edu-item, .hero {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}

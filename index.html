@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Harry Nguyen — Technology Manager</title>
+  <meta name="description" content="Harry Nguyen — Technology Manager. 13+ years at Accenture delivering for major Australian and New Zealand government clients." />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/print.css" media="print" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <div class="site-header__id">
+        <p class="site-header__name" id="hdr-name">Harry Nguyen</p>
+        <p class="site-header__title" id="hdr-title">Technology Manager</p>
+      </div>
+      <nav class="site-nav" aria-label="Section navigation">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#education">Education</a>
+      </nav>
+      <div class="site-header__actions">
+        <button class="btn btn--ghost" id="theme-toggle" aria-label="Toggle colour theme" title="Toggle light / dark">
+          <span class="theme-toggle__icon" aria-hidden="true">◐</span>
+        </button>
+        <button class="btn btn--primary" id="print-btn" title="Print / Save as PDF">Print</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+      <div class="container hero__inner">
+        <div class="hero__photo">
+          <img src="images/avatar-2024.jpg" alt="Photo of Harry Nguyen" />
+        </div>
+        <div class="hero__body">
+          <h1 class="hero__name" id="hero-name"></h1>
+          <p class="hero__title" id="hero-title"></p>
+          <ul class="hero__contact" id="hero-contact"></ul>
+        </div>
+        <ul class="hero__stats" id="hero-stats" aria-label="Key stats"></ul>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section__title">About</h2>
+        <p class="lede" id="about-body"></p>
+      </div>
+    </section>
+
+    <!-- ===== EXPERIENCE ===== -->
+    <section id="experience" class="section section--alt">
+      <div class="container">
+        <h2 class="section__title">Experience</h2>
+        <p class="section__lede">
+          Continuous tenure at <strong>Accenture</strong> since Feb 2012, across multiple government clients and roles. Click a segment in the timeline or any card to dive deeper.
+        </p>
+
+        <div class="timeline" id="timeline" aria-label="Career timeline">
+          <!-- rendered by app.js -->
+        </div>
+
+        <div class="roles" id="roles">
+          <!-- rendered by app.js -->
+        </div>
+
+        <details class="earlier-roles">
+          <summary>Earlier roles (pre-Accenture)</summary>
+          <ul id="earlier-roles-list"></ul>
+        </details>
+      </div>
+    </section>
+
+    <!-- ===== SKILLS ===== -->
+    <section id="skills" class="section">
+      <div class="container">
+        <h2 class="section__title">Skills</h2>
+        <div class="skills-grid" id="skills-grid"></div>
+        <h3 class="subsection__title">Soft skills</h3>
+        <div class="soft-skills" id="soft-skills"></div>
+      </div>
+    </section>
+
+    <!-- ===== CERTIFICATIONS ===== -->
+    <section id="certifications" class="section section--alt">
+      <div class="container">
+        <h2 class="section__title">Certifications</h2>
+        <ul class="certs" id="certs"></ul>
+      </div>
+    </section>
+
+    <!-- ===== EDUCATION ===== -->
+    <section id="education" class="section">
+      <div class="container">
+        <h2 class="section__title">Education</h2>
+        <ul class="education" id="education"></ul>
+      </div>
+    </section>
+
+    <!-- ===== EXTRACURRICULAR: languages / interests / volunteer ===== -->
+    <section id="extras" class="section section--alt">
+      <div class="container">
+        <h2 class="section__title">Extracurricular</h2>
+        <div class="extras-grid">
+          <div>
+            <h3 class="subsection__title">Languages</h3>
+            <ul class="languages" id="languages"></ul>
+          </div>
+          <div>
+            <h3 class="subsection__title">Volunteer work</h3>
+            <ul class="volunteer" id="volunteer"></ul>
+          </div>
+          <div>
+            <h3 class="subsection__title">Interests</h3>
+            <ul class="interests" id="interests"></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <p>
+        <a href="https://www.linkedin.com/in/HarryNguyen17" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
