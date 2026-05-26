@@ -396,8 +396,17 @@ button { font: inherit; cursor: pointer; }
   text-transform: uppercase; letter-spacing: 0.05em;
   margin-bottom: 0.75rem;
 }
-.skill-group ul { display: flex; flex-wrap: wrap; gap: 0.35rem; }
-.skill-group li {
+.skill-group__level {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ink-muted);
+  margin: 0.75rem 0 0.4rem;
+  font-weight: 700;
+}
+.skill-group__level:first-of-type { margin-top: 0; }
+.skill-group__chips { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+.skill-group__chips li {
   background: var(--bg-alt); color: var(--ink);
   padding: 0.25rem 0.7rem; border-radius: var(--radius-pill);
   font-size: 0.8rem;

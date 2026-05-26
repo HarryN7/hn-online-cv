@@ -183,19 +183,26 @@ const skills = {
   },
   technical: {
     title: 'Technical & Tools',
-    items: [
-      'Microsoft Excel (Highly advanced)',
-      'Microsoft PowerPoint (advanced)',
-      'Microsoft Word (advanced)',
-      'AWS (Proficient)',
-      'VBA (Proficient)',
-      'ServiceNow (Proficient)',
-      'JIRA (Proficient)',
-      'Confluence (Proficient)',
-      'Azure DevOps / TFS (Proficient)',
-      'SharePoint (Proficient)',
-      'Power BI (Proficient)',
-      'Azure (Basic)',
+    // Either `items: [...]` (flat chip list) OR `groups: [{ level, items }]`
+    // (chips grouped under a small heading per skill level). The renderer
+    // handles both shapes.
+    groups: [
+      { level: 'Highly Advanced', items: ['Microsoft Excel'] },
+      { level: 'Advanced', items: ['Microsoft PowerPoint', 'Microsoft Word'] },
+      {
+        level: 'Proficient',
+        items: [
+          'AWS',
+          'VBA',
+          'ServiceNow',
+          'JIRA',
+          'Confluence',
+          'Azure DevOps / TFS',
+          'SharePoint',
+          'Power BI',
+        ],
+      },
+      { level: 'Basic', items: ['Azure'] },
     ],
   },
 };

@@ -228,34 +228,15 @@
     header.appendChild(el('p', { class: 'role-card__summary' }, r.summary));
     card.appendChild(header);
 
+    // Body shows just the key achievements — Team/Client meta chips and
+    // the Scope and Tech sections were trimmed for readability. The
+    // corresponding fields (teamSize, keyWork, tech) remain in data.js
+    // in case we want to surface them again later.
     const body = el('div', { class: 'role-card__body' });
-
-    // meta chips
-    const meta = el('div', { class: 'role-card__meta' });
-    if (r.teamSize) meta.appendChild(el('span', { class: 'role-card__meta-item' }, [
-      el('strong', {}, 'Team: '), document.createTextNode(r.teamSize),
-    ]));
-    meta.appendChild(el('span', { class: 'role-card__meta-item' }, [
-      el('strong', {}, 'Client: '), document.createTextNode(r.clientFull),
-    ]));
-    body.appendChild(meta);
-
     if (r.highlights && r.highlights.length) {
       body.appendChild(el('div', { class: 'role-card__subtitle' }, 'Key achievements'));
       body.appendChild(
         el('ul', { class: 'role-card__list' }, r.highlights.map((h) => el('li', {}, h)))
-      );
-    }
-    if (r.keyWork && r.keyWork.length) {
-      body.appendChild(el('div', { class: 'role-card__subtitle' }, 'Scope & responsibilities'));
-      body.appendChild(
-        el('ul', { class: 'role-card__list' }, r.keyWork.map((k) => el('li', {}, k)))
-      );
-    }
-    if (r.tech && r.tech.length) {
-      body.appendChild(el('div', { class: 'role-card__subtitle' }, 'Key tech & tools'));
-      body.appendChild(
-        el('div', { class: 'role-card__tech' }, r.tech.map((t) => el('span', { class: 'role-card__tech-tag' }, t)))
       );
     }
     card.appendChild(body);
@@ -288,12 +269,23 @@
   function renderSkills() {
     const grid = $('#skills-grid');
     Object.values(skills).forEach((g) => {
-      grid.appendChild(
-        el('div', { class: 'skill-group' }, [
-          el('h3', {}, g.title),
-          el('ul', {}, g.items.map((i) => el('li', {}, i))),
-        ])
-      );
+      const box = el('div', { class: 'skill-group' }, [el('h3', {}, g.title)]);
+
+      if (Array.isArray(g.groups)) {
+        // Grouped by level — render a small sub-heading + chip row per group.
+        g.groups.forEach((sub) => {
+          box.appendChild(el('p', { class: 'skill-group__level' }, sub.level));
+          box.appendChild(
+            el('ul', { class: 'skill-group__chips' }, sub.items.map((i) => el('li', {}, i)))
+          );
+        });
+      } else {
+        // Flat list — single chip row.
+        box.appendChild(
+          el('ul', { class: 'skill-group__chips' }, g.items.map((i) => el('li', {}, i)))
+        );
+      }
+      grid.appendChild(box);
     });
 
     const soft = $('#soft-skills');
