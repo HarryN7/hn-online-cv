@@ -160,14 +160,31 @@
 
     children.push(ornament());
 
-    // Credentials — three items separated by middle dots, centred.
-    const credRuns = [];
-    heroStats.forEach((s, i) => {
-      credRuns.push(text('✓ ', { color: C_ACCENT, bold: true, size: 18 }));
-      credRuns.push(text(s, { size: 18, color: C_INK }));
-      if (i < heroStats.length - 1) credRuns.push(text('       ', { size: 18 }));
-    });
-    children.push(centred(credRuns, { spacing: { after: 200 } }));
+    // Credentials — one column per stat in a borderless table so each
+    // statement gets its own evenly-sized cell and wraps cleanly within
+    // it instead of competing for line space in one paragraph.
+    const colPct = Math.floor(100 / heroStats.length);
+    children.push(new Table({
+      width: { size: 100, type: WidthType.PERCENTAGE },
+      borders: noBorders,
+      rows: [new TableRow({
+        children: heroStats.map((stat) => new TableCell({
+          width: { size: colPct, type: WidthType.PERCENTAGE },
+          margins: { top: 80, bottom: 80, left: 120, right: 120 },
+          borders: noCellBorders,
+          children: [new Paragraph({
+            alignment: AlignmentType.CENTER,
+            children: [
+              text('✓ ', { color: C_ACCENT, bold: true, size: 18 }),
+              text(stat, { size: 16, color: C_INK }),
+            ],
+          })],
+        })),
+      })],
+    }));
+    // Some Word versions don't render a paragraph immediately after a
+    // table, so an explicit spacer paragraph guarantees clean separation.
+    children.push(new Paragraph({ spacing: { after: 140 }, children: [] }));
 
     // ---------- ABOUT (no heading) ----------
     children.push(new Paragraph({
@@ -196,6 +213,12 @@
       border: { bottom: { color: C_PRIMARY, style: BorderStyle.SINGLE, size: 6, space: 4 } },
       children: [text('IT Consulting across multiple government clients', { italics: true, size: 18, color: C_MUTED })],
     }));
+
+    // Centered label above the Gantt timeline.
+    children.push(centred(
+      [text('Roles in Accenture Timeline', { italics: true, size: 16, color: C_MUTED })],
+      { spacing: { before: 60, after: 80 } }
+    ));
 
     // Timeline table (Gantt-style)
     children.push(buildTimelineTable(d));
@@ -431,13 +454,18 @@
       borders: noBorders,
       rows: [new TableRow({
         children: [
-          // Coloured left bar — thin and tall (spans whole cell height).
+          // Coloured left bar — thin and tall (spans the cell height).
+          // A non-breaking space avoids a literally empty cell, which some
+          // Word versions flag as unreadable content. The font size is
+          // small so the cell doesn't grow taller than its sibling content.
           new TableCell({
             width: { size: 2, type: WidthType.PERCENTAGE },
             shading: { type: ShadingType.CLEAR, color: 'auto', fill: hex(r.color) },
             margins: { top: 0, bottom: 0, left: 0, right: 0 },
             borders: noCellBorders,
-            children: [new Paragraph({ children: [] })],
+            children: [new Paragraph({
+              children: [text(' ', { size: 2 })],
+            })],
           }),
           // Content cell.
           new TableCell({
