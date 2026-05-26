@@ -381,6 +381,29 @@
     });
   }
 
+  // ---------- DOWNLOAD .docx BUTTON ----------
+  function setupDownload() {
+    const btn = $('#download-cv-btn');
+    if (!btn) return;
+    const original = btn.textContent;
+    btn.addEventListener('click', async () => {
+      btn.disabled = true;
+      btn.textContent = 'Generating…';
+      try {
+        await window.exportCVToDocx();
+        btn.textContent = '✓ Downloaded';
+      } catch (e) {
+        console.error('docx export failed:', e);
+        btn.textContent = 'Failed';
+      } finally {
+        setTimeout(() => {
+          btn.disabled = false;
+          btn.textContent = original;
+        }, 1500);
+      }
+    });
+  }
+
   // ---------- NAV ACTIVE-SECTION TRACKING ----------
   function setupNav() {
     const links = document.querySelectorAll('.site-nav a');
@@ -412,6 +435,7 @@
     renderExtras();
     setupTheme();
     setupPrint();
+    setupDownload();
     setupNav();
   });
 })();
