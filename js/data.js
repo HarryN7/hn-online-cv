@@ -19,10 +19,9 @@ const profile = {
 
 // Hero credentials — each item is a single statement.
 const heroStats = [
-  '13+ years of ICT experience',
+  '13+ years working in the Government industry',
   'Highly experienced in ICT delivery and ICT operations management',
-  'Australian Citizenship',
-  'NV1 Cleared',
+  'Australian Citizen · NV1 Cleared',
 ];
 
 // Each Accenture role. Newest first.
@@ -135,7 +134,7 @@ const accentureRoles = [
   },
   {
     id: 'defence-hr',
-    role: 'Packaged Software Design · Data Conversion · ITIL Assessment · Batch Schedule Testing',
+    role: 'Software Designer · Data Conversion Officer · ITIL Assessor · Batch Tester',
     client: 'Defence',
     clientFull: 'Australian Department of Defence',
     program: 'System Modernisation Program',
