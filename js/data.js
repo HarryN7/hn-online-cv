@@ -14,7 +14,7 @@ const profile = {
   phoneParts: ['0468', '434', '786'],
   linkedin: 'https://www.linkedin.com/in/HarryNguyen17',
   about:
-    "Technology Manager with 13+ years at Accenture, delivering for major Australian and New Zealand government clients. I have led teams of up to 30+ people across the full software lifecycle — from estimation and design through to release management and large-scale IT operations. I combine technical depth with the interpersonal skills to align stakeholders, drive continuous improvement, and deliver outcomes that move the needle for clients.",
+    "Technology Manager with with more than 13 years of ICT experience, delivering for major Australian and New Zealand government clients while with Accenture. I have led teams of up to 30+ people across the full software lifecycle — from project estimation and design through to release management and large-scale IT operations. I combine technical depth with the interpersonal skills to align stakeholders, drive continuous improvement, and deliver desired outcomes clients.",
 };
 
 // Hero credentials — each item is a single statement.
@@ -39,13 +39,13 @@ const accentureRoles = [
     teamSize: '30+',
     color: '#00B5C3',
     summary:
-      'Led a 30+ person team providing platform support for 50+ enterprise tools, 600+ servers, and enterprise backup & batch management across the organisation.',
+      'Led a 30+ person team to transition into a complex technical landscape from previous managed service incumbent to provide ICT platform support for 50+ enterprise applications, 600+ servers, and enterprise backup & batch management across the organisation.',
     highlights: [
-      'Led multiple successful complex enterprise tooling cutovers covering 50+ tools and 600+ servers, with scope shifting up to the final week of each cutover. Received direct positive feedback from senior client executives.',
-      'Stood up a new managed-provider service in a complex multi-vendor environment — covering application support, infrastructure support, batch management and backup management across the organisation.',
-      'Stabilised BAU operations rapidly to meet demanding contract SLAs while a newly-formed team learned a complex technical landscape, including peak business-critical delivery periods.',
-      'Drove adoption of AI and automation to optimise operational work and reduce running costs.',
-      'Directly led two senior Managers and four Associate Managers; the team finished the year with zero voluntary exits.',
+      'Led multiple successful complex enterprise tooling cutovers covering 50+ applications and 600+ servers, with scope shifting up to the final week of each cutover. Received direct positive feedback from senior client executives.',
+      'Stood up a new ICT managed-provider service in a complex multi-vendor environment — covering application support, infrastructure support, batch management, and backup management across the organisation.',
+      'Managed a newly-formed team through stablisation of BAU operations to meet demanding contract SLAs while learning a complex technical landscape, including peak business-critical delivery periods.',
+      'Managed team through adoption of automation and AI to optimise operational work and reduce running costs.',
+      'Directly led team ranging from juniors to experts in their field; the team finished the year with zero voluntary exits.',
       'Built trusted working relationships with senior client executives and reported to multiple Accenture Directors daily.',
     ],
     keyWork: [
@@ -65,7 +65,7 @@ const accentureRoles = [
     teamSize: '300+ branch (12 scrum teams)',
     color: '#0094A7',
     summary:
-      'Owned end-to-end release management for a 300+ person branch — coordinating 12 scrum teams releasing 10 Australia-wide applications used by millions of Australians daily.',
+      'Owned end-to-end ICT release management for a 300+ person branch — coordinating 12 scrum teams releasing functional changes that impact front-facing applications used by millions of Australians.',
     highlights: [
       'Led successful delivery of 6+ major releases spanning ~50 features per release across 10 major Australia-wide applications.',
       'Reshaped the branch\'s release management capability — leadership credited the change with positively shifting how the function is perceived.',
@@ -73,7 +73,7 @@ const accentureRoles = [
       'Built a branch-wide release information hub on SharePoint — a single source of truth for release information that reached 1000+ views in its first two months.',
       'Introduced a "Release Tracker" concept, consolidating previously siloed assurance activities (Test, Business Readiness, Security) into one shared view aligned to a single source of truth for scope.',
       'Created standardised executive email templates promoted by the Delivery Director for branch-wide use.',
-      'Significant contributor to a major recompete RFQ — drafted key sections, coordinated review of 100+ CVs, and organised a senior leadership photoshoot.',
+      'Significant contributor to a major recompete Request For Quote — drafted key sections, coordinated review of 100+ CVs, and organised a senior leadership photoshoot.',
     ],
     keyWork: [
       'Delivery planning, scope governance, release assurance, business readiness, executive release-summary presentations.',
@@ -93,14 +93,13 @@ const accentureRoles = [
     teamSize: '20+ (within 30+ person Ops team)',
     color: '#0076A7',
     summary:
-      'Led the Environment Management function within a 30+ person IT Operations team — maintaining 10+ applications across 15+ test environments for 100+ users and 10+ programs of work.',
+      'Led the Environment Management function within a 30+ person IT Operations team — maintaining critical applications used by millions of Australians across 15+ test environments for 100+ users',
     highlights: [
       'Delivered ~$1M AUD/yr in infrastructure cost savings through initiatives including environment availability scheduling, RDS multi-AZ → single-AZ in performance environments, S3 lifecycle policies, and Christmas-period shutdowns.',
       'Co-managed delivery of a major data centre migration program — coordinating SMEs to build new environments and decommission on-premise infrastructure for ~$430K/yr in additional savings.',
       'Drove the urgent fix for a critical environment-setup issue blocking the program — coordinated 15+ people to resolve a complex issue within a week.',
-      'Engaged a developer to build a custom incident dashboard providing real-time tracking of bugs and incidents in a single view across multiple tools.',
-      'Took on additional role as Resourcing & Onboarding Manager — onboarded 44 people and managed 71 roll-offs in a 9-month window; reduced average time-to-invoice from ~15 days to ~5 days.',
-      'Acted as second-in-command to the Operations Senior Manager and filled in as head lead during a 2-month leave period.',
+      'Self-initiated an engagement with a developer to build a custom incident dashboard providing real-time tracking of bugs and incidents in a single view across multiple tools.',
+      'Took on additional role as Resourcing & Onboarding Manager — onboarded 44 people and managed 71 roll-offs in a 9-month window.',
       'Recognised at all levels — including personal thank-you emails from senior client executives and multiple Accenture Managing Directors.',
     ],
     keyWork: [
@@ -112,20 +111,21 @@ const accentureRoles = [
   },
   {
     id: 'ird-tax',
-    role: 'Various: Resource Planning, Defect Manager, Integration Designer, Dev Team Manager',
+    role: 'Various Roles: Resource Planning, Defect Manager, Integration Designer, Dev Team Manager',
     client: 'New Zealand Tax',
     clientFull: 'New Zealand Tax',
-    program: 'Large-scale system transformation',
+    program: 'Large-scale Tax System Transformation',
     start: '2016-11',
     end: '2020-05',
     teamSize: 'Mixed Accenture + client developers',
     color: '#2D8B6A',
     summary:
-      'Spent nearly 4 years on a large transformation program, rotating through estimation, design, defect management and development leadership — gaining hands-on experience across the full software development lifecycle.',
+      'Spent nearly 4 years on one of the southern hemisphere\'s largest ICT transformation program, gaining hands-on experience across the full software development lifecycle. Performed in several roles within project estimation, design, defect management, and development phases',
     highlights: [
+      'Regularly travelled from Australia to be mainly based on-site in New Zealand for the program',
       'Key contributor in the work-effort estimation team for a multi-million dollar program.',
-      'Automated a slow, error-prone defect resolution process — measurable improvement in throughput and quality.',
-      'Led a mixed Accenture + client developer team to successfully deliver two releases.',
+      'Automated a slow, error-prone IT defect resolution process — measurable improvement in throughput and quality.',
+      'Led a small development team responsibile for critical front-facing application to successfully deliver two releases.',
     ],
     keyWork: [
       'Roles rotated: Resource Planning → Defect Manager → Integration Designer → Dev Team Manager.',
@@ -135,7 +135,7 @@ const accentureRoles = [
   },
   {
     id: 'defence-hr',
-    role: 'Various: Packaged Software Design, Data Conversion, ITIL Assessment, Batch Schedule Testing',
+    role: 'Various Roles: Packaged Software Design, Data Conversion, ITIL Assessment, Batch Schedule Testing',
     client: 'Defence',
     clientFull: 'Australian Department of Defence',
     program: 'Large-scale system modernisation',
@@ -144,7 +144,7 @@ const accentureRoles = [
     teamSize: 'Project teams across multiple workstreams',
     color: '#9A6B3F',
     summary:
-      'First client engagement at Accenture, spanning nearly 4 years across multiple roles in a large modernisation programme.',
+      'First client engagement at Accenture, spanning nearly 4 years across multiple roles in a large ICT modernisation programme.',
     highlights: [
       'Authored a configuration management maturity assessment and improvement recommendation report for the client.',
       'Completed data conversion designs for a large system implementation.',
@@ -176,6 +176,7 @@ const skills = {
       'Team leadership (30+ people)',
       'Stakeholder management (senior executive)',
       'Continuous improvement',
+      'Automation and AI Planning',
       'Resource & onboarding management',
       'Scrum / SAFe Agile',
     ],
@@ -183,17 +184,18 @@ const skills = {
   technical: {
     title: 'Technical & Tools',
     items: [
-      'AWS',
-      'Azure',
-      'ServiceNow',
-      'JIRA',
-      'Confluence',
-      'Azure DevOps / TFS',
-      'SharePoint',
-      'Power BI',
-      'Microsoft Excel (advanced)',
-      'Python',
-      'VBA',
+      'Microsoft Excel (Highly advanced)',
+      'Microsoft PowerPoint (advanced)',
+      'Microsoft Word (advanced)',
+      'AWS (Proficient)',
+      'VBA (Proficient)',
+      'ServiceNow (Proficient)',
+      'JIRA (Proficient)',
+      'Confluence (Proficient)',
+      'Azure DevOps / TFS (Proficient)',
+      'SharePoint (Proficient)',
+      'Power BI (Proficient)',
+      'Azure (Basic)',
     ],
   },
 };
