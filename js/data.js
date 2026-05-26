@@ -182,17 +182,17 @@ const skills = {
     ],
   },
   technical: {
-    title: 'Technical & Tools',
+    title: 'Tools',
     // Either `items: [...]` (flat chip list) OR `groups: [{ level, items }]`
     // (chips grouped under a small heading per skill level). The renderer
     // handles both shapes.
     groups: [
-      { level: 'Highly Advanced', items: ['Microsoft Excel'] },
-      { level: 'Advanced', items: ['Microsoft PowerPoint', 'Microsoft Word'] },
+      { level: 'Advanced', items: ['Microsoft Excel', 'Microsoft Word', 'Microsoft PowerPoint'] },
       {
         level: 'Proficient',
         items: [
           'AWS',
+          'Azure',
           'VBA',
           'ServiceNow',
           'JIRA',
@@ -202,7 +202,6 @@ const skills = {
           'Power BI',
         ],
       },
-      { level: 'Basic', items: ['Azure'] },
     ],
   },
 };
