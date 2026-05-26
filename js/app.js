@@ -190,8 +190,9 @@
   }
 
   function shortRoleLabel(r) {
-    // Trim long "Various: ..." labels for the timeline
-    if (r.role.startsWith('Various:')) return 'Various roles';
+    // For older roles where `role` is a "·"-separated multi-role list,
+    // the program name reads better in a narrow timeline segment.
+    if (r.role.includes(' · ')) return r.program;
     return r.role;
   }
 
@@ -213,18 +214,27 @@
     });
     if (openByDefault) card.setAttribute('open', '');
 
+    // Header layout:
+    //   Row 1: bold role title (+ chevron)            dates (right)
+    //   Row 2: italic program  ·  [Client name] Client (in role colour)
+    //   Row 3: one-line summary
     const header = el('summary', { class: 'role-card__header' });
-    const titleCol = el('div', {}, [
-      el('h3', { class: 'role-card__title' }, [
-        el('span', { class: 'role-card__client', style: `background:${r.color};` }, r.client),
-        document.createTextNode(r.role),
-        el('span', { class: 'role-card__chevron', 'aria-hidden': 'true' }, '▶'),
-      ]),
-      el('span', { class: 'role-card__program' }, r.program),
-    ]);
-    const dateCol = el('div', { class: 'role-card__dates' }, `${fmtYM(r.start)} — ${fmtYM(r.end)}`);
-    header.appendChild(titleCol);
-    header.appendChild(dateCol);
+    header.appendChild(
+      el('div', { class: 'role-card__title-row' }, [
+        el('h3', { class: 'role-card__title' }, [
+          document.createTextNode(r.role),
+          el('span', { class: 'role-card__chevron', 'aria-hidden': 'true' }, '▶'),
+        ]),
+        el('span', { class: 'role-card__dates' }, `${fmtYM(r.start)} — ${fmtYM(r.end)}`),
+      ])
+    );
+    header.appendChild(
+      el('div', { class: 'role-card__sub' }, [
+        el('span', { class: 'role-card__program' }, r.program),
+        el('span', { class: 'role-card__sep' }, ' · '),
+        el('span', { class: 'role-card__client', style: `color:${r.color};` }, r.client + ' Client'),
+      ])
+    );
     header.appendChild(el('p', { class: 'role-card__summary' }, r.summary));
     card.appendChild(header);
 
@@ -371,11 +381,11 @@
     });
   }
 
-  // ---------- PRINT BUTTON ----------
+  // ---------- PRINT HANDLER ----------
+  // No on-page Print button — users save a richer .docx via the Download
+  // CV button. But Ctrl+P still works, so reveal contact details first
+  // so the exported PDF includes them.
   function setupPrint() {
-    $('#print-btn').addEventListener('click', () => window.print());
-    // Before any print (button or browser shortcut), auto-reveal contact
-    // details so the exported PDF includes them.
     window.addEventListener('beforeprint', () => {
       document.querySelectorAll('.email-reveal-btn, .phone-reveal-btn').forEach((btn) => btn.click());
     });

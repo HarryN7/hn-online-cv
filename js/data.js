@@ -14,7 +14,7 @@ const profile = {
   phoneParts: ['0468', '434', '786'],
   linkedin: 'https://www.linkedin.com/in/HarryNguyen17',
   about:
-    "Technology Manager with with more than 13 years of ICT experience, delivering for major Australian and New Zealand government clients while with Accenture. I have led teams of up to 30+ people across the full software lifecycle — from project estimation and design through to release management and large-scale IT operations. I combine technical depth with the interpersonal skills to align stakeholders, drive continuous improvement, and deliver desired outcomes clients.",
+    "Technology Manager with more than 13 years of ICT experience, delivering for major Australian and New Zealand government clients with Accenture. I have led teams of up to 30+ people across the full software lifecycle — from project estimation and design through to release management and large-scale IT operations. I combine technical depth with the interpersonal skills to align stakeholders, drive continuous improvement, and deliver desired outcomes for clients.",
 };
 
 // Hero credentials — each item is a single statement.
@@ -39,13 +39,13 @@ const accentureRoles = [
     teamSize: '30+',
     color: '#00B5C3',
     summary:
-      'Led a 30+ person team to transition into a complex technical landscape from previous managed service incumbent to provide ICT platform support for 50+ enterprise applications, 600+ servers, and enterprise backup & batch management across the organisation.',
+      'Led a 30+ person team taking over ICT platform support for 50+ enterprise applications, 600+ servers, and enterprise backup & batch management from the previous managed-service incumbent across the organisation.',
     highlights: [
       'Led multiple successful complex enterprise tooling cutovers covering 50+ applications and 600+ servers, with scope shifting up to the final week of each cutover. Received direct positive feedback from senior client executives.',
       'Stood up a new ICT managed-provider service in a complex multi-vendor environment — covering application support, infrastructure support, batch management, and backup management across the organisation.',
-      'Managed a newly-formed team through stablisation of BAU operations to meet demanding contract SLAs while learning a complex technical landscape, including peak business-critical delivery periods.',
-      'Managed team through adoption of automation and AI to optimise operational work and reduce running costs.',
-      'Directly led team ranging from juniors to experts in their field; the team finished the year with zero voluntary exits.',
+      'Managed a newly-formed team through stabilisation of BAU operations to meet demanding contract SLAs while learning a complex technical landscape, including peak business-critical delivery periods.',
+      'Managed the team through adoption of automation and AI to optimise operational work and reduce running costs.',
+      'Directly led a team ranging from juniors to experts in their field; the team finished the year with zero voluntary exits.',
       'Built trusted working relationships with senior client executives and reported to multiple Accenture Directors daily.',
     ],
     keyWork: [
@@ -93,7 +93,7 @@ const accentureRoles = [
     teamSize: '20+ (within 30+ person Ops team)',
     color: '#0076A7',
     summary:
-      'Led the Environment Management function within a 30+ person IT Operations team — maintaining critical applications used by millions of Australians across 15+ test environments for 100+ users',
+      'Led the Environment Management function within a 30+ person IT Operations team — maintaining critical applications used by millions of Australians across 15+ test environments for 100+ users.',
     highlights: [
       'Delivered ~$1M AUD/yr in infrastructure cost savings through initiatives including environment availability scheduling, RDS multi-AZ → single-AZ in performance environments, S3 lifecycle policies, and Christmas-period shutdowns.',
       'Co-managed delivery of a major data centre migration program — coordinating SMEs to build new environments and decommission on-premise infrastructure for ~$430K/yr in additional savings.',
@@ -111,21 +111,21 @@ const accentureRoles = [
   },
   {
     id: 'ird-tax',
-    role: 'Various Roles: Resource Planning, Defect Manager, Integration Designer, Dev Team Manager',
+    role: 'Resource Planning · Defect Manager · Integration Designer · Dev Team Manager',
     client: 'New Zealand Tax',
     clientFull: 'New Zealand Tax',
-    program: 'Large-scale Tax System Transformation',
+    program: 'Tax System Transformation Program',
     start: '2016-11',
     end: '2020-05',
     teamSize: 'Mixed Accenture + client developers',
     color: '#2D8B6A',
     summary:
-      'Spent nearly 4 years on one of the southern hemisphere\'s largest ICT transformation program, gaining hands-on experience across the full software development lifecycle. Performed in several roles within project estimation, design, defect management, and development phases',
+      "Spent nearly 4 years on one of the southern hemisphere's largest ICT transformation programs, gaining hands-on experience across the full software development lifecycle. Performed several roles spanning project estimation, design, defect management, and development.",
     highlights: [
-      'Regularly travelled from Australia to be mainly based on-site in New Zealand for the program',
+      'Regularly travelled from Australia to be based on-site in New Zealand for the program.',
       'Key contributor in the work-effort estimation team for a multi-million dollar program.',
-      'Automated a slow, error-prone IT defect resolution process — measurable improvement in throughput and quality.',
-      'Led a small development team responsibile for critical front-facing application to successfully deliver two releases.',
+      'Automated a slow, error-prone defect resolution process — measurable improvement in throughput and quality.',
+      'Led a small development team responsible for a critical front-facing application to successfully deliver two releases.',
     ],
     keyWork: [
       'Roles rotated: Resource Planning → Defect Manager → Integration Designer → Dev Team Manager.',
@@ -135,16 +135,16 @@ const accentureRoles = [
   },
   {
     id: 'defence-hr',
-    role: 'Various Roles: Packaged Software Design, Data Conversion, ITIL Assessment, Batch Schedule Testing',
+    role: 'Packaged Software Design · Data Conversion · ITIL Assessment · Batch Schedule Testing',
     client: 'Defence',
     clientFull: 'Australian Department of Defence',
-    program: 'Large-scale system modernisation',
+    program: 'System Modernisation Program',
     start: '2012-02',
     end: '2015-11',
     teamSize: 'Project teams across multiple workstreams',
     color: '#9A6B3F',
     summary:
-      'First client engagement at Accenture, spanning nearly 4 years across multiple roles in a large ICT modernisation programme.',
+      'First client engagement at Accenture, spanning nearly 4 years across multiple roles in a large ICT modernisation program.',
     highlights: [
       'Authored a configuration management maturity assessment and improvement recommendation report for the client.',
       'Completed data conversion designs for a large system implementation.',
