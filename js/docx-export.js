@@ -93,7 +93,7 @@
   // ===============================================================
   function buildDocument(d, photoBytes) {
     const {
-      Document, Paragraph, TextRun, ImageRun, BorderStyle, AlignmentType,
+      Document, Paragraph, TextRun, ImageRun, ExternalHyperlink, BorderStyle, AlignmentType,
       Table, TableRow, TableCell, WidthType, ShadingType,
       Tab, TabStopType, TabStopPosition, convertInchesToTwip,
     } = d;
@@ -167,6 +167,22 @@
     ));
 
     children.push(ornament());
+
+    // Link to the live online CV — centred, just above the credentials.
+    // The URL is rendered as a hyperlink so it's clickable in Word.
+    const ONLINE_URL = 'https://harryn7.github.io/hn-online-cv/';
+    children.push(centred(
+      [
+        text(`${profile.name}'s full interactive online CV can be viewed at: `, {
+          size: 16, color: C_MUTED,
+        }),
+        new ExternalHyperlink({
+          link: ONLINE_URL,
+          children: [text(ONLINE_URL, { size: 16, color: C_PRIMARY, underline: {} })],
+        }),
+      ],
+      { spacing: { before: 60, after: 140 } }
+    ));
 
     // Credentials — one column per stat in a borderless table so each
     // statement gets its own evenly-sized cell and wraps cleanly within
@@ -445,8 +461,10 @@
       }));
     }
 
-    // Bullets
-    (r.highlights || []).slice(0, HIGHLIGHTS_PER_ROLE).forEach((h) => {
+    // Bullets — skipped entirely if the role is flagged summaryOnlyDocx
+    // (used to save page space when the summary already says enough).
+    const bullets = r.summaryOnlyDocx ? [] : (r.highlights || []).slice(0, HIGHLIGHTS_PER_ROLE);
+    bullets.forEach((h) => {
       contentParas.push(new Paragraph({
         indent: { left: 240, hanging: 240 },
         spacing: { after: 40 },

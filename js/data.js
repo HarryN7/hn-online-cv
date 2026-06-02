@@ -142,8 +142,12 @@ const accentureRoles = [
     end: '2015-11',
     teamSize: 'Project teams across multiple workstreams',
     color: '#9A6B3F',
+    // Hint to the .docx renderer: this role's summary already covers
+    // the substance, so skip the bullet list in the offline CV to save
+    // a few lines of page space. (The online site still shows them.)
+    summaryOnlyDocx: true,
     summary:
-      'First client engagement at Accenture, spanning nearly 4 years across multiple roles in a large ICT modernisation program.',
+      'First client engagement at Accenture, spanning nearly 4 years across multiple roles in a large ICT modernisation program. Gained experience with Config Management, data conversion, software design, and batch schedule testing.',
     highlights: [
       'Authored a configuration management maturity assessment and improvement recommendation report for the client.',
       'Completed data conversion designs for a large system implementation.',
