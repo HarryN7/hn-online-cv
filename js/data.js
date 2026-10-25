@@ -21,7 +21,7 @@ const profile = {
 const heroStats = [
   '13+ years working in the Government industry',
   'Highly experienced in ICT delivery and ICT operations management',
-  'Australian Citizen · NV1 Cleared',
+  'Security Cleared Australian Citizen',
 ];
 
 // Each Accenture role. Newest first.
